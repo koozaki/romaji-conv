@@ -1,0 +1,26 @@
+{
+  "name": "romaji-conv",
+  "version": "1.0.0",
+  "description": "Convert romaji into hiragana",
+  "main": "lib/index.js",
+  "repository": "git@github.com:koozaki/romaji-conv.git",
+  "author": "Kojiro Ozaki <koujirou0111@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.4.0",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "build": "run-s lint webpack",
+    "lint": "eslint ./bin/ ./lib/",
+    "webpack": "webpack"
+  }
+}

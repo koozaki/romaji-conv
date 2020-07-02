@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <title>romaji-conv</title>
+    <meta name="description" content="Convert romaji into hiragana">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="romaji-conv">
+    <meta property="og:site_name" content="romaji-conv">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:description" content="Convert romaji into hiragana">
+    <meta property="og:url" content="https://koozaki.com/romaji-conv/">
+    <link rel="canonical" href="https://koozaki.com/romaji-conv/">
+    <link rel="stylesheet" href="https://koozaki.com/romaji-conv/assets/css/style.css">
+    <style>
+    input {
+      font-size: 30px;
+    }
+    </style>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">romaji-conv</h1>
+      <h2 class="project-tagline">Convert romaji into hiragana</h2>
+      <a href="https://github.com/koozaki/romaji-conv" class="btn">View on GitHub</a>
+    </section>
+
+    <section class="main-content">
+      <h2>About</h2>
+      <p>ローマ字をひらがなに変換します。訓令式、ヘボン式どちらにも対応しています。</p>
+      <p>Node.js, Browser, Shell 上で実行可能な軽量 JavaScript ライブラリです。</p>
+
+      <h3>Demo</h3>
+
+      <label>ローマ字：<input class="romaji" type="text" size="40" autocomplete="off"></label>
+      <br>
+      <label>ひらがな：<input class="hiragana" type="text" size="40" readonly></label>
+
+      <h3>Sample</h3>
+
+      <h4>Node.js</h4>
+      <div>
+<pre class="highlight"><code><span class="sb">const</span> romajiConv = <span class="sb">require</span>(<span class="gh">'romaji-conv'</span>);
+console.log(romajiConv(<span class="gh">'anoinutyauchautocyauntyau'</span>));
+<span class="gh">// あのいぬちゃうちゃうとちゃうんちゃう</span>
+</code></pre>
+    </div>
+
+      <h4>Browser</h4>
+      <div>
+
+<pre class="highlight"><code>&lt;<span class="sb">script</span> src="romaji-conv.js"&gt;&lt;/<span class="sb">script</span>&gt;
+&lt;<span class="sb">script</span>&gt;
+console.log(window.romajiConv(<span class="gh">'anoinutyauchautocyauntyau'</span>));
+&lt;/<span class="sb">script</span>&gt;
+<span class="gh">// あのいぬちゃうちゃうとちゃうんちゃう</span>
+</code></pre>
+    </div>
+
+      <h4>CLI (Shell)</h4>
+      <div>
+<pre class="highlight"><code><span class="sb">$</span> ./bin/romaji-conv.js anoinutyauchautocyauntyau
+<span class="gh">あのいぬちゃうちゃうとちゃうんちゃう</span>
+</code></pre>
+      </div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/koozaki/romaji-conv">romaji-conv</a> is maintained by <a href="https://github.com/koozaki">koozaki</a>.</span>
+      </footer>
+    </section>
+
+    <script src="./dist/romaji-conv.js?202007041740"></script>
+    <script>
+    !(function () {
+      var $romajiInput = document.querySelector('.romaji');
+      var $hiraganaInput = document.querySelector('.hiragana');
+
+      var handleChangeInput = function (e) {
+        var romaji = e.target.value;
+        var hiragana = romajiConv(romaji);
+
+        $hiraganaInput.value = hiragana;
+      };
+
+      $romajiInput.addEventListener('keydown', handleChangeInput);
+      $romajiInput.addEventListener('keyup', handleChangeInput);
+      $romajiInput.addEventListener('keypress', handleChangeInput);
+    })();
+    </script>
+
+  </body>
+</html>
