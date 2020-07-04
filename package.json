@@ -1,5 +1,5 @@
 {
-  "name": "romaji-conv",
+  "name": "@koozaki/romaji-conv",
   "version": "1.0.0",
   "description": "Convert romaji into hiragana",
   "main": "lib/index.js",
@@ -22,5 +22,8 @@
     "build": "run-s lint webpack",
     "lint": "eslint ./bin/ ./lib/",
     "webpack": "webpack"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
