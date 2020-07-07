@@ -1,6 +1,6 @@
 /*!
  * @name     @koozaki/romaji-conv
- * @version  1.0.2
+ * @version  1.0.3
  * @desc     Convert romaji into hiragana
  * @author   Kojiro Ozaki <koujirou0111@gmail.com>
  * @see      {@link https://koozaki.com/romaji-conv/}
