@@ -4,7 +4,7 @@ const package = require('./package');
 const license = `@name     ${package.name}
 @version  ${package.version}
 @desc     ${package.description}
-@author   ${package.author}
+@author   ${package.author.name} <${package.author.email}> (${package.author.url})
 @see      {@link https://koozaki.com/romaji-conv/}
 @license  ${package.license}`;
 
