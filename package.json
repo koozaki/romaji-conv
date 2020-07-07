@@ -20,7 +20,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "run-s lint webpack",
+    "build": "run-s lint test webpack",
     "lint": "eslint ./bin/ ./lib/",
     "test": "jest",
     "tdd": "jest --watchAll",
