@@ -20,7 +20,7 @@ console.log(romajiConv('anoinutyauchautocyauntyau'));
 
 #### Browser
 ```html
-<script src="romaji-conv.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv/dist/romaji-conv.js"></script>
 <script>
 console.log(window.romajiConv('anoinutyauchautocyauntyau'));
 </script>
