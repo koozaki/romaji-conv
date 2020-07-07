@@ -1,4 +1,5 @@
 # romaji-conv
+![Node.js Package](https://github.com/koozaki/romaji-conv/workflows/Node.js%20Package/badge.svg)
 <a href="https://www.npmjs.com/package/@koozaki/romaji-conv"><img src="https://img.shields.io/npm/v/@koozaki/romaji-conv?style=flat-square"></a>
 
 Convert romaji into hiragana
