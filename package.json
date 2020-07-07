@@ -1,11 +1,35 @@
 {
   "name": "@koozaki/romaji-conv",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert romaji into hiragana",
-  "main": "lib/index.js",
+  "keywords": [
+    "romaji",
+    "hiragana",
+    "nihongo",
+    "japanese",
+    "convert"
+  ],
+  "homepage": "https://koozaki.com/romaji-conv/",
+  "bugs": {
+    "url": "https://github.com/koozaki/romaji-conv/issues",
+    "email": "koujirou0111@gmail.com"
+  },
   "repository": "git@github.com:koozaki/romaji-conv.git",
-  "author": "Kojiro Ozaki <koujirou0111@gmail.com>",
   "license": "MIT",
+  "author": {
+    "name": "Kojiro Ozaki",
+    "email": "koujirou0111@gmail.com",
+    "url": "https://koozaki.com/"
+  },
+  "main": "lib/index.js",
+  "bin": "bin/romaji-conv.js",
+  "scripts": {
+    "build": "run-s lint test webpack",
+    "lint": "eslint ./bin/ ./lib/",
+    "tdd": "jest --watchAll",
+    "test": "jest",
+    "webpack": "webpack"
+  },
   "dependencies": {
     "commander": "^5.1.0"
   },
@@ -18,13 +42,6 @@
     "npm-run-all": "^4.1.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
-  },
-  "scripts": {
-    "build": "run-s lint test webpack",
-    "lint": "eslint ./bin/ ./lib/",
-    "test": "jest",
-    "tdd": "jest --watchAll",
-    "webpack": "webpack"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
