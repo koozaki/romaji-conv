@@ -1,4 +1,6 @@
 # romaji-conv
+<a href="https://www.npmjs.com/package/@koozaki/romaji-conv"><img src="https://img.shields.io/npm/v/@koozaki/romaji-conv?style=flat-square"></a>
+
 Convert romaji into hiragana
 
 ## About
