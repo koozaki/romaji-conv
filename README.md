@@ -12,7 +12,7 @@ Convert romaji into hiragana
 - [シンプルなディクショナリ型設計](https://github.com/koozaki/romaji-conv/blob/master/lib/map.js)のため誰でも簡単に改善ができます。
 - Node.js, Browser, Shell 上で実行可能な軽量 JavaScript ライブラリです。
 
-### Sample
+### Usage
 #### Node.js
 ```node
 const romajiConv = require('romaji-conv');
