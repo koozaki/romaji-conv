@@ -7,7 +7,7 @@
 
 Convert romaji into hiragana
 
-## About
+### About
 - ローマ字をひらがなに変換します。
 - 訓令式、ヘボン式など幅広い記法に対応しています。
 - シンプルな[完全ディクショナリ型設計](https://github.com/koozaki/romaji-conv/blob/master/lib/map.js)のため誰でも簡単に[改善](https://github.com/koozaki/romaji-conv/pulls)ができます。
