@@ -1,19 +1,23 @@
 {
   "name": "@koozaki/romaji-conv",
-  "version": "1.0.6",
-  "description": "Convert romaji into hiragana",
+  "version": "2.0.0",
+  "description": "Convert romaji into kana",
   "keywords": [
     "romaji",
+    "kana",
     "hiragana",
+    "katakana",
     "nihongo",
     "japanese",
     "convert",
     "ローマ字",
-    "ひらがな"
+    "かな",
+    "ひらがな",
+    "カタカナ"
   ],
   "homepage": "https://koozaki.com/romaji-conv/",
   "bugs": {
-    "url": "https://github.com/koozaki/romaji-conv/issues",
+    "url": "https://github.com/koozaki/romaji-conv/issues/new?assignees=koozaki&labels=bug&template=bug_report.md",
     "email": "koujirou0111@gmail.com"
   },
   "repository": "git@github.com:koozaki/romaji-conv.git",
@@ -28,8 +32,8 @@
   "scripts": {
     "build": "run-s lint test webpack",
     "lint": "eslint ./bin/ ./lib/",
-    "tdd": "jest --watchAll",
-    "test": "jest",
+    "tdd": "jest --watchAll --coverage --verbose",
+    "test": "jest --coverage --verbose",
     "webpack": "webpack"
   },
   "dependencies": {

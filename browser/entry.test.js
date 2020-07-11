@@ -7,5 +7,5 @@ test('window に romajiConv 関数がある', () => {
 });
 
 test('window で動作する', () => {
-  expect(window.romajiConv('hoge')).toBe('ほげ');
+  expect(window.romajiConv('hoge').toHiragana()).toBe('ほげ');
 });
