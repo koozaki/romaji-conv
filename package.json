@@ -15,7 +15,7 @@
     "ひらがな",
     "カタカナ"
   ],
-  "homepage": "https://koozaki.com/romaji-conv/",
+  "homepage": "https://romaji-conv.koozaki.com/",
   "bugs": {
     "url": "https://github.com/koozaki/romaji-conv/issues/new?assignees=koozaki&labels=bug&template=bug_report.md",
     "email": "koujirou0111@gmail.com"
