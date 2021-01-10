@@ -14,6 +14,10 @@ module.exports = {
   output: {
     filename: 'romaji-conv.js'
   },
+  target: [
+    'web',
+    'es5'
+  ],
   module: {
     rules: [
       {
