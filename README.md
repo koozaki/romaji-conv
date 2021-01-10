@@ -20,7 +20,7 @@ Convert romaji into kana
 
 ##### Load the romaji-conv.js (jsDelivr)
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv@2.0.6/dist/romaji-conv.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv@2.0.7/dist/romaji-conv.js"></script>
 ```
 
 ##### 1. Method pattern
