@@ -11,7 +11,13 @@ program
   .option('--katakana')
   .action((someString, options) => {
     const instance = romajiConv(someString);
-    console.log(options.katakana ? instance.toKatakana() : instance.toHiragana());
+    if (options.katakana) {
+      console.log(instance.toKatakana());
+    } else if (options.romaji) {
+      console.log(instance.toRomaji());
+    } else {
+      console.log(instance.toHiragana());
+    }
   });
 
 program
