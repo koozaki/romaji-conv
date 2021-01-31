@@ -9,6 +9,7 @@ const program = new Command();
 
 program
   .option('--katakana')
+  .option('--romaji')
   .action((someString, options) => {
     const instance = romajiConv(someString);
     if (options.katakana) {
