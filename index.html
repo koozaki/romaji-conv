@@ -1,45 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja-JP">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>romaji-conv | ローマ字ひらがなカタカナ変換ツール</title>
-    <meta name="description" content="ローマ字・ひらがな・カタカナをひらがな・カタカナに変換します。訓令式、ヘボン式など幅広い記法に対応しています。">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="romaji-conv | ローマ字ひらがなカタカナ変換ツール">
-    <meta property="og:site_name" content="romaji-conv | ローマ字ひらがなカタカナ変換ツール">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:description" content="ローマ字・ひらがな・カタカナをひらがな・カタカナに変換します。訓令式、ヘボン式など幅広い記法に対応しています。">
-    <meta property="og:url" content="https://koozaki.com/romaji-conv/">
-    <link rel="canonical" href="https://koozaki.com/romaji-conv/">
-    <link rel="stylesheet" href="https://koozaki.com/romaji-conv/assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
+    <meta
+      name="description"
+      content="ローマ字・ひらがな・カタカナをひらがな・カタカナに変換します。訓令式、ヘボン式など幅広い記法に対応しています。"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      property="og:title"
+      content="romaji-conv | ローマ字ひらがなカタカナ変換ツール"
+    />
+    <meta
+      property="og:site_name"
+      content="romaji-conv | ローマ字ひらがなカタカナ変換ツール"
+    />
+    <meta property="og:locale" content="ja_JP" />
+    <meta
+      property="og:description"
+      content="ローマ字・ひらがな・カタカナをひらがな・カタカナに変換します。訓令式、ヘボン式など幅広い記法に対応しています。"
+    />
+    <meta property="og:url" content="https://koozaki.com/romaji-conv/" />
+    <link rel="canonical" href="https://koozaki.com/romaji-conv/" />
+    <link
+      rel="stylesheet"
+      href="https://koozaki.com/romaji-conv/assets/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css"
+    />
     <style>
-    textarea, input {
-      width: 100%;
-      font-size: 30px;
-    }
+      textarea,
+      input {
+        width: 100%;
+        font-size: 30px;
+      }
     </style>
   </head>
   <body>
     <section class="page-header">
       <h1 class="project-name">romaji-conv</h1>
-      <h2 class="project-tagline">ローマ字ひらがなカタカナ変換ツール & ライブラリ</h2>
-      <a href="https://github.com/koozaki/romaji-conv" class="btn">View on GitHub</a>
+      <h2 class="project-tagline">
+        ローマ字ひらがなカタカナ変換ツール & ライブラリ
+      </h2>
+      <a href="https://github.com/koozaki/romaji-conv" class="btn"
+        >View on GitHub</a
+      >
       <div>
-        <a href="https://github.com/koozaki/romaji-conv/actions?query=workflow%3A%22Node.js+Package%22">
-          <img src="https://github.com/koozaki/romaji-conv/workflows/Node.js%20Package/badge.svg">
+        <a
+          href="https://github.com/koozaki/romaji-conv/actions?query=workflow%3A%22Node.js+Package%22"
+        >
+          <img
+            src="https://github.com/koozaki/romaji-conv/workflows/Node.js%20Package/badge.svg"
+          />
         </a>
         <a href="https://github.com/koozaki/romaji-conv/releases">
-          <img src="https://img.shields.io/github/v/release/koozaki/romaji-conv?style=flat-square">
+          <img
+            src="https://img.shields.io/github/v/release/koozaki/romaji-conv?style=flat-square"
+          />
         </a>
         <a href="https://www.npmjs.com/package/@koozaki/romaji-conv">
-          <img src="https://img.shields.io/npm/v/@koozaki/romaji-conv?style=flat-square">
+          <img
+            src="https://img.shields.io/npm/v/@koozaki/romaji-conv?style=flat-square"
+          />
         </a>
         <a href="https://www.jsdelivr.com/package/npm/@koozaki/romaji-conv">
-          <img src="https://data.jsdelivr.com/v1/package/npm/@koozaki/romaji-conv/badge">
+          <img
+            src="https://data.jsdelivr.com/v1/package/npm/@koozaki/romaji-conv/badge"
+          />
         </a>
         <a href="https://github.com/koozaki/romaji-conv/blob/master/LICENSE">
-          <img src="https://img.shields.io/npm/l/@koozaki/romaji-conv?style=flat-square">
+          <img
+            src="https://img.shields.io/npm/l/@koozaki/romaji-conv?style=flat-square"
+          />
         </a>
       </div>
     </section>
@@ -49,15 +84,25 @@
 
       <h4>Input</h4>
       <div>
-        <label>ローマ字 or ひらがな or カタカナ <small>(<span class="count-input">0</span>文字)</small><textarea class="romaji"></textarea></label>
+        <label
+          >ローマ字 or ひらがな or カタカナ
+          <small>(<span class="count-input">0</span>文字)</small
+          ><textarea class="romaji"></textarea>
+        </label>
       </div>
 
       <h4>Output</h4>
       <div>
-        <label>ひらがな <small>(<span class="count-hiragana">0</span>文字)</small><textarea class="hiragana" readonly></textarea></label>
+        <label
+          >ひらがな <small>(<span class="count-hiragana">0</span>文字)</small
+          ><textarea class="hiragana" readonly></textarea>
+        </label>
       </div>
       <div>
-        <label>カタカナ <small>(<span class="count-katakana">0</span>文字)</small><textarea class="katakana" readonly></textarea></label>
+        <label
+          >カタカナ <small>(<span class="count-katakana">0</span>文字)</small
+          ><textarea class="katakana" readonly></textarea>
+        </label>
       </div>
 
       <h3>About</h3>
@@ -65,9 +110,24 @@
       <ul>
         <li>ローマ字・ひらがな・カタカナをひらがな・カタカナに変換します。</li>
         <li>訓令式、ヘボン式など幅広い記法に対応しています。</li>
-        <li>シンプルな<a href="https://github.com/koozaki/romaji-conv/blob/master/lib/map/">完全ディクショナリ型設計</a>のため誰でも簡単に<a href="https://github.com/koozaki/romaji-conv/pulls">改善</a>できます。</li>
-        <li>Browser, Node.js, CLI で動作する軽量 JavaScript ライブラリです。</li>
-        <li>不具合報告は<a href="https://github.com/koozaki/romaji-conv/issues/new?assignees=koozaki&labels=bug&template=bug_report.md&title=%5BBug%5D+AAA%E3%82%92%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%A8BBB%E3%81%AB%E3%81%AA%E3%82%8B">こちら</a>からお願いします。</li>
+        <li>
+          シンプルな<a
+            href="https://github.com/koozaki/romaji-conv/blob/master/lib/map/"
+            >完全ディクショナリ型設計</a
+          >のため誰でも簡単に<a
+            href="https://github.com/koozaki/romaji-conv/pulls"
+            >改善</a
+          >できます。
+        </li>
+        <li>
+          Browser, Node.js, CLI で動作する軽量 JavaScript ライブラリです。
+        </li>
+        <li>
+          不具合報告は<a
+            href="https://github.com/koozaki/romaji-conv/issues/new?assignees=koozaki&labels=bug&template=bug_report.md&title=%5BBug%5D+AAA%E3%82%92%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%A8BBB%E3%81%AB%E3%81%AA%E3%82%8B"
+            >こちら</a
+          >からお願いします。
+        </li>
       </ul>
 
       <h3>Usage</h3>
@@ -79,7 +139,7 @@
 
       <h5>1. Method pattern</h5>
       <div>
-<pre><code>&lt;script&gt;
+        <pre><code>&lt;script&gt;
 console.log(romajiConv('hogehoge').toHiragana()); // ほげほげ
 
 // ローマ字 → ひらがな・カタカナ
@@ -99,7 +159,7 @@ console.log(katakana.toHiragana()); // あのいぬちゃうちゃうとちゃ�
       </div>
 
       <h5>2. Function pattern</h5>
-<pre><code>&lt;script&gt;
+      <pre><code>&lt;script&gt;
 var toHiragana = romajiConv.toHiragana;
 var toKatakana = romajiConv.toKatakana;
 
@@ -115,14 +175,16 @@ console.log(toHiragana('ホゲホゲ')); // ほげほげ
 &lt;/script&gt;
 </code></pre>
 
-      <h4>Node.js<h4>
+      <h4>Node.js</h4>
 
       <h5>Install package</h5>
-      <pre><code>npm install @koozaki/romaji-conv</code></pre><small>or</small><pre><code>yarn add @koozaki/romaji-conv</code></pre>
+      <pre><code>npm install @koozaki/romaji-conv</code></pre>
+      <small>or</small>
+      <pre><code>yarn add @koozaki/romaji-conv</code></pre>
 
       <h5>1. Method pattern</h5>
       <div>
-<pre><code>const romajiConv = require('@koozaki/romaji-conv');
+        <pre><code>const romajiConv = require('@koozaki/romaji-conv');
 
 console.log(romajiConv('hogehoge').toHiragana()); // ほげほげ
 
@@ -160,7 +222,7 @@ console.log(toHiragana('ホゲホゲ')); // ほげほげ
       <h4>CLI</h4>
 
       <div>
-<pre><code># ローマ字 → ひらがな・カタカナ
+        <pre><code># ローマ字 → ひらがな・カタカナ
 $(npm bin)/romaji-conv anoinutyauchautocyauntyau # あのいぬちゃうちゃうとちゃうんちゃう
 $(npm bin)/romaji-conv anoinutyauchautocyauntyau --katakana # アノイヌチャウチャウトチャウンチャウ
 
@@ -173,52 +235,62 @@ $(npm bin)/romaji-conv アノイヌチャウチャウトチャウンチャウ # 
       </div>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/koozaki/romaji-conv">romaji-conv</a> is maintained by <a href="https://koozaki.com/">koozaki</a>.</span>
+        <span class="site-footer-owner"
+          ><a href="https://github.com/koozaki/romaji-conv">romaji-conv</a> is
+          maintained by <a href="https://koozaki.com/">koozaki</a>.</span
+        >
       </footer>
     </section>
     <script src="./dist/romaji-conv.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-    $(function() {
-      var updateCdnJs = function (version) {
-        var jsPath = 'https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv@' + version + '/dist/romaji-conv.js';
-        $('.cdn-js').attr('href', jsPath).text(jsPath);
-      };
+      $(function () {
+        var updateCdnJs = function (version) {
+          var jsPath =
+            'https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv@' +
+            version +
+            '/dist/romaji-conv.js';
+          $('.cdn-js').attr('href', jsPath).text(jsPath);
+        };
 
-      updateCdnJs('latest');
+        updateCdnJs('latest');
 
-      $.get('https://data.jsdelivr.com/v1/package/npm/@koozaki/romaji-conv').done(function(d) {
-        updateCdnJs(d.tags.latest);
+        $.get(
+          'https://data.jsdelivr.com/v1/package/npm/@koozaki/romaji-conv'
+        ).done(function (d) {
+          updateCdnJs(d.tags.latest);
+        });
+
+        var romajiConv = window.romajiConv;
+
+        var $romajiInput = $('.romaji');
+        var $hiraganaInput = $('.hiragana');
+        var $katakanaInput = $('.katakana');
+        var $countInput = $('.count-input');
+        var $countHiragana = $('.count-hiragana');
+        var $countKatakana = $('.count-katakana');
+
+        var handleChangeInput = function (e) {
+          var romaji = $(e.target).val();
+          var instance = romajiConv(romaji);
+          var hiragana = instance.toHiragana();
+          var katakana = instance.toKatakana();
+          $hiraganaInput.val(hiragana);
+          $katakanaInput.val(katakana);
+          $countInput.text(romaji.length);
+          $countHiragana.text(hiragana.length);
+          $countKatakana.text(katakana.length);
+        };
+
+        $romajiInput
+          .keydown(handleChangeInput)
+          .keypress(handleChangeInput)
+          .keyup(handleChangeInput);
       });
-
-      var romajiConv = window.romajiConv;
-
-      var $romajiInput = $('.romaji');
-      var $hiraganaInput = $('.hiragana');
-      var $katakanaInput = $('.katakana');
-      var $countInput = $('.count-input');
-      var $countHiragana = $('.count-hiragana');
-      var $countKatakana = $('.count-katakana');
-
-      var handleChangeInput = function (e) {
-        var romaji = $(e.target).val();
-        var instance = romajiConv(romaji);
-        var hiragana = instance.toHiragana();
-        var katakana = instance.toKatakana();
-        $hiraganaInput.val(hiragana);
-        $katakanaInput.val(katakana);
-        $countInput.text(romaji.length);
-        $countHiragana.text(hiragana.length);
-        $countKatakana.text(katakana.length);
-      };
-
-      $romajiInput
-        .keydown(handleChangeInput)
-        .keypress(handleChangeInput)
-        .keyup(handleChangeInput);
-    });
     </script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>
