@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 /* global test, expect */
 require('./entry');
 
