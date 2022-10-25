@@ -1,6 +1,6 @@
 /*!
  * @name     @koozaki/romaji-conv
- * @version  2.0.18
+ * @version  2.0.19
  * @desc     Convert romaji into kana
  * @author   Kojiro Ozaki <koujirou0111@gmail.com> (https://koozaki.com/)
  * @see      {@link https://koozaki.com/romaji-conv/}
