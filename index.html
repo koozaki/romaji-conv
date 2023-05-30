@@ -250,7 +250,7 @@ $(npm bin)/romaji-conv アノイヌチャウチャウトチャウンチャウ # 
             'https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv@' +
             version +
             '/dist/romaji-conv.js';
-         $('.cdn-js').attr('href', jsPath).text(jsPath);
+          $('.cdn-js').attr('href', jsPath).text(jsPath);
         };
 
         updateCdnJs('latest');
@@ -289,6 +289,8 @@ $(npm bin)/romaji-conv アノイヌチャウチャウトチャウンチャウ # 
       });
     </script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

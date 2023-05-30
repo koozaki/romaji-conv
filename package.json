@@ -30,8 +30,9 @@
   "main": "lib/index.js",
   "bin": "bin/romaji-conv.js",
   "scripts": {
-    "build": "run-s lint test webpack",
+    "build": "run-s lint prettier test webpack",
     "lint": "eslint ./bin/ ./lib/",
+    "prettier": "prettier --write .",
     "tdd": "jest --watchAll --coverage --verbose",
     "test": "jest --coverage --verbose",
     "webpack": "webpack"
