@@ -23,7 +23,7 @@ Convert romaji into kana
 ##### Load the romaji-conv.js (jsDelivr)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv@2.0.21/dist/romaji-conv.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@koozaki/romaji-conv@2.0.22/dist/romaji-conv.js"></script>
 ```
 
 ##### 1. Method pattern
@@ -121,12 +121,12 @@ console.log(toHiragana('ホゲホゲ')); // ほげほげ
 
 ```sh
 # ローマ字 → ひらがな・カタカナ
-$(npm bin)/romaji-conv anoinutyauchautocyauntyau # あのいぬちゃうちゃうとちゃうんちゃう
-$(npm bin)/romaji-conv anoinutyauchautocyauntyau --katakana # アノイヌチャウチャウトチャウンチャウ
+./bin/romaji-conv.js anoinutyauchautocyauntyau # あのいぬちゃうちゃうとちゃうんちゃう
+./bin/romaji-conv.js anoinutyauchautocyauntyau --katakana # アノイヌチャウチャウトチャウンチャウ
 
 # ひらがな → カタカナ
-$(npm bin)/romaji-conv あのいぬちゃうちゃうとちゃうんちゃう --katakana # アノイヌチャウチャウトチャウンチャウ
+./bin/romaji-conv.js あのいぬちゃうちゃうとちゃうんちゃう --katakana # アノイヌチャウチャウトチャウンチャウ
 
 # カタカナ → ひらがな
-$(npm bin)/romaji-conv アノイヌチャウチャウトチャウンチャウ # あのいぬちゃうちゃうとちゃうんちゃう
+./bin/romaji-conv.js アノイヌチャウチャウトチャウンチャウ # あのいぬちゃうちゃうとちゃうんちゃう
 ```
