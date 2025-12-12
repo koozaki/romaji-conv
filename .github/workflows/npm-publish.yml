@@ -7,6 +7,9 @@ on:
   release:
     types: [created]
 
+permissions:
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,7 +31,7 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
           scope: '@koozaki'
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -42,6 +45,6 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
           scope: '@koozaki'
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
