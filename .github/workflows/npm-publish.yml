@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 20
       - run: yarn
-      - run: yarn build
+      - run: yarn test
 
   publish-npm:
     needs: build
@@ -44,6 +44,9 @@ jobs:
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -51,6 +54,12 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
           scope: '@koozaki'
-      - run: npm publish --access public
+      - name: Update gpr
+        run: npm install -g npm@latest
+      - run: npm install -g yarn@latest
+      - run: yarn
+      - run: yarn build
+      - run: yarn test
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
