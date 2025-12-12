@@ -32,8 +32,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@koozaki'
       - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   publish-gpr:
     needs: build
